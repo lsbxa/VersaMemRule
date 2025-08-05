@@ -16,6 +16,6 @@ yara.exe VersaMemRule.yar VersaMem.jar
 ![VersaMemAct](https://github.com/user-attachments/assets/235cc2af-d75d-4a51-832b-ef3a987e6e8d)
 
 ## References:
-https://bazaar.abuse.ch/sample/4bcedac20a75e8f8833f4725adfc87577c32990c3783bf6c743f14599a176c37/#yara
-https://www.cybersecuritydive.com/news/volt-typhoon-zero-day-isps-msps/725492/
-https://nvd.nist.gov/vuln/detail/cve-2024-39717
+- https://bazaar.abuse.ch/sample/4bcedac20a75e8f8833f4725adfc87577c32990c3783bf6c743f14599a176c37/#yara
+- https://www.cybersecuritydive.com/news/volt-typhoon-zero-day-isps-msps/725492/
+- https://nvd.nist.gov/vuln/detail/cve-2024-39717
