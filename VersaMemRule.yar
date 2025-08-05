@@ -5,7 +5,7 @@ rule VersaMem_Webshell_Indicators {
         date = "2025-08-05"
 
     strings:
-		// General strings
+	// General strings
         $s1 = "org.apache.catalina.startup.Bootstrap" ascii
         $s2 = "com.versa.vnms.ui.TestMain" ascii
         $s3 = "/tmp/.java_pid" ascii
@@ -16,12 +16,12 @@ rule VersaMem_Webshell_Indicators {
         $s8 = "captureLoginPasswordCode" ascii
         $s9 = "/tmp/.temp.data" ascii
         $s10 = "getInsertCode" ascii
-		$s11 = "pgrep" ascii
-		$s12 = "com/sun/tools/attach/VirtualMachine" ascii
-		$s13 = "loadAgent" ascii
-		$s14 = "Base64" ascii
-		$s15 = "AES" ascii
-		$s16 = "org.apache.catalina.core.ApplicationFilterChain" ascii
+	$s11 = "pgrep" ascii
+	$s12 = "com/sun/tools/attach/VirtualMachine" ascii
+	$s13 = "loadAgent" ascii
+	$s14 = "Base64" ascii
+	$s15 = "AES" ascii
+	$s16 = "org.apache.catalina.core.ApplicationFilterChain" ascii
 
         // Malicious class files
         $webshell1 = "com/versa/vnms/ui/init/CapturePassTransformer.classPK" ascii
@@ -34,4 +34,5 @@ rule VersaMem_Webshell_Indicators {
 
     condition:
         4 of ($s*) or (any of ($maven*) and 1 of ($webshell*))
+
 }
